@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #dedede;
 }
 
 .parte-superior{
@@ -24,4 +25,22 @@ body{
     border: 2px solid red;
     width: 60vh;
     height: 30vh;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.parte-inferior .display-status p{
+    margin-top: 6vh;
+    display: inline-block;
+}
+
+.parte-inferior #palpite{
+    width: 55px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 5px;
 }
