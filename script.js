@@ -26,15 +26,20 @@ function atualizar_num_palpites(num){
     tentativas_restantes--;
     status_valor.innerHTML = `${tentativas_restantes}`;
     lista_de_palpites.push(num);
+    if(palpites.innerHTML == ''){
+        palpites.innerHTML = num;
+    }else{
+        palpites.innerHTML += ` - ${num}`
+    }
 }
 
 function calcular_resultado(num){
     if (num < numero_premiado){
-        num
+        alert('O seu palpite está abaixo.');
     }else if (num > numero_premiado){
-        num
+        alert('O seu palpite está acima.');
     }else{
-        num
+        alert();
     }
     // TEM QUE TESTAR NO 'ATUALIZAR NUM PALPITES' SE É A ÚLTIMA TENTATIVA
 }
@@ -49,7 +54,7 @@ function palpitar(){
 }
 
 function inicializar(){
-    status_.innerHTML = 'Número restantes de tentatvivas: ';
+    status_.innerHTML = 'Número restantes de tentativas: ';
     status_valor.innerHTML = `${tentativas_restantes}`;
     palpites.innerHTML = '';
 }
