@@ -33,11 +33,12 @@ body{
     background-color: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .parte-superior p{
     width: 50%;
-    font-size:36px;
+    font-size:48px;
 }
 
 .parte-superior b{
@@ -45,8 +46,8 @@ body{
 }
 
 .parte-superior img{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
 }
 
 .parte-superior img.disabled{

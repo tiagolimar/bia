@@ -2,6 +2,7 @@ const status_ = document.querySelector('#status');
 const status_valor = document.querySelector('#status-valor');
 const palpites = document.querySelector('#display-palpites');
 const palpite = document.querySelector('#palpite');
+const msg = document.querySelector('#mensagem');
 const imagem = document.querySelector('#imagem');
 
 let numero_premiado = 0;
@@ -12,10 +13,10 @@ let lista_de_palpites = [];
 let reiniciar = false;
 
 function derrota(){
-    imagem.src = '03.png';
-    status_.innerHTML = 'Você perdeu, o número era: ';
+    imagem.src = 'img/03.png';
+    status_.innerHTML = 'Você perdeu, o número é: ';
     status_valor.innerHTML = numero_premiado;
-    alert('Você perdeu! Pressione Enter para reiniciar o jogo.')
+    msg.innerHTML = 'Pressione Enter para reiniciar!';
     reiniciar = true;
 }
 
@@ -52,11 +53,12 @@ function calcular_resultado(num){
         if(tentativas_restantes == 0){derrota()}
     }else{
         imagem.src = 'img/02.png';
-        status_.innerHTML = "Parabéns o número é: ";
+        status_.innerHTML = "Parabéns você ganhou! O número é: ";
         status_valor.innerHTML = numero_premiado;
-        alert('Você ganhou! Pressione Enter para reiniciar o jogo.')
+        msg.innerHTML = 'Pressione Enter para reiniciar!';
         reiniciar = true;
     }
+    palpite.value = '';
 }
 
 function palpitar(){
@@ -68,13 +70,16 @@ function palpitar(){
 }
 
 function inicializar(){
+    lista_de_palpites = [];
     reiniciar = false;
     imagem.src = 'img/01.png';
     numero_premiado = Math.floor(Math.random() * 100) + 1;
     tentativas_restantes = 10;
     status_.innerHTML = 'Número restantes de tentativas: ';
     status_valor.innerHTML = `${tentativas_restantes}`;
+    msg.innerHTML = 'Seus palpites:';
     palpites.innerHTML = '';
+    palpite.value = '';
 }
 
 inicializar();
