@@ -38,7 +38,7 @@ body{
 
 .parte-superior p{
     width: 50%;
-    font-size:48px;
+    font-size:36px;
 }
 
 .parte-superior b{
@@ -46,8 +46,8 @@ body{
 }
 
 .parte-superior img{
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
 }
 
 .parte-superior img.disabled{
