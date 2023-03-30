@@ -74,7 +74,7 @@ function inicializar(){
     reiniciar = false;
     imagem.src = 'img/01.png';
     numero_premiado = Math.floor(Math.random() * 100) + 1;
-    tentativas_restantes = 10;
+    tentativas_restantes = 3;
     status_.innerHTML = 'Número restantes de tentativas: ';
     status_valor.innerHTML = `${tentativas_restantes}`;
     msg.innerHTML = 'Seus palpites:';

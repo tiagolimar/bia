@@ -7,7 +7,7 @@
 }
 
 body{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@ body{
 }
 
 .container{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,8 +28,8 @@ body{
 
 .parte-superior{
     padding: 20px;
-    width: 60vh;
-    height: 30vh;
+    width: 100%;
+    height: 60%;
     border-radius: 10px 10px 0 0;
     background-color: #ffffff;
     display: flex;
@@ -37,8 +38,8 @@ body{
 }
 
 .parte-superior p{
-    width: 50%;
-    font-size:48px;
+    width: 45%;
+    font-size: 36px;
 }
 
 .parte-superior b{
@@ -46,8 +47,7 @@ body{
 }
 
 .parte-superior img{
-    width: 230px;
-    height: 230px;
+    width: 60%;
 }
 
 .parte-superior img.disabled{
@@ -59,18 +59,18 @@ body{
 }
 
 .parte-inferior{
-    width: 60vh;
-    height: 25vh;
+    width: 100%;
+    height: 50%;
     border-radius: 0 0 10px 10px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+    gap: 4%;
 }
 
 .parte-inferior .display-status p{
-    margin-top: 6vh;
+    margin-top: 6%;
     display: inline-block;
 }
 
@@ -92,4 +92,59 @@ body{
 .parte-inferior #display-palpites,
 .parte-inferior #status-valor{
     color: #FFB431;
+}
+
+/* @media (min-width: 360px){
+    .container{
+        width: 80%;
+    }
+    .parte-superior p{
+        font-size: 28px;
+    }
+} */
+
+
+@media (min-width: 200px){
+    .container{
+        width: 90%;
+    }
+    .parte-superior p{
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 600px){
+    .container{
+        width: 60%;
+    }
+    .parte-superior p{
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 800px){
+    .container{
+        width: 60%;
+    }
+    .parte-superior p{
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 900px){
+    .container{
+        width: 40%;
+    }
+    .parte-superior p{
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1150px){
+    .container{
+        width: 30%;
+    }
+    .parte-superior p{
+        font-size: 36px;
+    }
 }
